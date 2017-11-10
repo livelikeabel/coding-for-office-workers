@@ -5,4 +5,4 @@ from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse("Hello, world. You are at the blog index.")
+    return HttpResponse("Hello, world. You are at the index.")
