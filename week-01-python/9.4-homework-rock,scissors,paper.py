@@ -20,7 +20,7 @@ import random
 win_count = 0
 lose_count = 0
 
-while win_count or lose_count < 4:
+while win_count <3 and lose_count < 3:
     user_choice = input("'가위, 바위, 보'중 하나를 선택해 주세요 : ") #예외처리 해야하나?
     print("당신의 선택 : {}".format(user_choice))
 
@@ -33,29 +33,29 @@ while win_count or lose_count < 4:
             print("비겼습니다.")
         if computer_choice == "바위":
             print("졌습니다.")
-            lose_count += lose_count + 1
+            lose_count += 1
         if computer_choice == "보":
             print("이겼습니다.")
-            win_count += win_count + 1
+            win_count += 1
 
     elif user_choice == "바위":
         if computer_choice == "바위":
             print("비겼습니다.")
         if computer_choice == "보":
             print("졌습니다.")
-            lose_count += lose_count + 1
+            lose_count += 1
         if computer_choice == "가위":
             print("이겼습니다.")
-            win_count += win_count + 1
+            win_count += 1
 
     elif user_choice == "보":
         if computer_choice == "보":
             print("비겼습니다.")
         if computer_choice == "가위":
             print("졌습니다.")
-            lose_count += lose_count + 1
+            lose_count += 1
         if computer_choice == "바위":
             print("이겼습니다.")
-            win_count += win_count + 1
+            win_count += 1
 
     print("스코어 : {}번 이기고, {}번 졌습니다.".format(win_count, lose_count))
