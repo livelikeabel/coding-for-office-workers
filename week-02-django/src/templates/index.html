@@ -8,8 +8,11 @@
 <div class="colorful-text">Hello world, jacob</div>
 <div class="colorful-text">Hello world, isac</div>-->
 <div class="colorful-text">
-  <div>Hello world, {{ name }}</div>
+  <!-- <div>Hello world, {{ name }}</div> -->
   <div>Hello world, jacob</div>
   <div>Hello world, isac</div>
+  {% for article in article_list %}
+    <div>{{ article.title }}</div>
+  {% endfor %}
 </div>
 {% endblock %}
