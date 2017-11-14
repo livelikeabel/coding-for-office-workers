@@ -7,12 +7,21 @@
 <!--<div class="colorful-text">Hello world, {{ name }}</div>
 <div class="colorful-text">Hello world, jacob</div>
 <div class="colorful-text">Hello world, isac</div>-->
-<div class="colorful-text">
-  <!-- <div>Hello world, {{ name }}</div> -->
-  <div>Hello world, jacob</div>
-  <div>Hello world, isac</div>
-  {% for article in article_list %}
-    <div>{{ article.title }}</div>
-  {% endfor %}
+<div class="container">
+  <div class="col-xs-6">
+    <div class="colorful-text">
+      <!-- <div>Hello world, {{ name }}</div> -->
+      <div>Hello world, jacob</div>
+      <div>Hello world, isac</div>
+    </div>
+  </div>
+  <div class="col-xs-6">
+    {% for article in article_list %}
+      <div>
+        {{ article.title }}
+        <span class="label label-default">{{ article.view_count }}</span>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 {% endblock %}
